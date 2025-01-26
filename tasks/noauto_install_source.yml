@@ -46,6 +46,7 @@
           ansible.builtin.command:
             cmd: install {{ lazygit_build_dir }}/lazygit /usr/local/bin
           become: true
+          changed_when: true
 
         - name: Remove extracted binary
           ansible.builtin.file:
