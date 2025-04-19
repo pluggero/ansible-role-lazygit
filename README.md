@@ -12,6 +12,12 @@ None.
 
 Available variables are listed below, along with default values (see `defaults/main.yml`):
 
+```yaml
+lazygit_version: "x.x.x"
+```
+
+The version of Lazygit to install
+
 ## Dependencies
 
 None.
