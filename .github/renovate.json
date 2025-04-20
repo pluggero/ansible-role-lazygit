@@ -1,11 +1,22 @@
 {
-  "extends": ["config:best-practices", ":disableRateLimiting"],
-  "enabledManagers": ["github-actions", "pip_requirements", "regex"],
+  "extends": [
+    "config:best-practices",
+    ":disableRateLimiting"
+  ],
+  "enabledManagers": [
+    "github-actions",
+    "pip_requirements",
+    "custom.regex"
+  ],
   "customManagers": [
     {
       "customType": "regex",
-      "fileMatch": ["^defaults/main\\.yml$"],
-      "matchStrings": ["lazygit_version:\\s+\"(?<currentValue>[\\d\\.]+)\""],
+      "fileMatch": [
+        "^defaults/main\\.yml$"
+      ],
+      "matchStrings": [
+        "lazygit_version:\\s+\"(?<currentValue>[\\d\\.]+)\""
+      ],
       "datasourceTemplate": "github-releases",
       "depNameTemplate": "jesseduffield/lazygit",
       "versioningTemplate": "semver"
@@ -13,7 +24,9 @@
   ],
   "packageRules": [
     {
-      "matchPackageNames": ["jesseduffield/lazygit"],
+      "matchPackageNames": [
+        "jesseduffield/lazygit"
+      ],
       "groupName": "Update Lazygit version"
     }
   ]
