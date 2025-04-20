@@ -23,6 +23,7 @@ lazygit_install_method: "package"
 ```
 
 - The installation method to use. Can only be `package`.
+- Due to the fact that the lazygit is not available in all distributions, it is then installed from the source.
 
 ## Dependencies
 
